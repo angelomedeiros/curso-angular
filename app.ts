@@ -6,7 +6,6 @@ console.log(`Esse é o episódio ${episode}`)
 ++episode
 console.log(`Esse é o episódio ${episode}`)
 
-
 // Por padrão o tipo da variavel é Any caso não seja atribuido nehum valor
 let nome
 nome = 's'
@@ -17,3 +16,28 @@ nome = 1
 // let sobrenome = 'Medeiros'
 // sobrenome = 123
 
+// Possibilidade de declarar a variavel o tipo função com sua entrada e saida
+// let call: (name: string) => void
+let call: (name: string) => string
+call = name => `${name} Medeiros`
+
+console.log(call('Angelo'))
+
+// Os dois cófigos abaixo são equivalantes o uso do ? serve para indicar que o parâmetro
+// é opcional
+
+const velocidadeA = (aceleracao: number, tempo: number = 2) => {
+	return aceleracao * tempo
+}
+
+console.log(`Velocidade de A é ${velocidadeA(10)}`)
+console.log(`Velocidade de A é ${velocidadeA(10, 3)}`)
+// ou
+
+const velocidadeB = (aceleracao: number, tempo?: number) => {
+	const t = tempo || 3
+	return aceleracao * t
+}
+
+console.log(`Velocidade de b é ${velocidadeB(10)}`)
+console.log(`Velocidade de b é ${velocidadeB(10, 4)}`)

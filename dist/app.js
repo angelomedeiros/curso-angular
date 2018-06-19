@@ -13,3 +13,23 @@ nome = 1;
 // Isso ocassionará um erro quando atribuido um tipo diferente de string como no caso 123
 // let sobrenome = 'Medeiros'
 // sobrenome = 123
+// Possibilidade de declarar a variavel o tipo função com sua entrada e saida
+// let call: (name: string) => void
+var call;
+call = function (name) { return name + " Medeiros"; };
+console.log(call('Angelo'));
+// Os dois cófigos abaixo são equivalantes o uso do ? serve para indicar que o parâmetro
+// é opcional
+var velocidadeA = function (aceleracao, tempo) {
+    if (tempo === void 0) { tempo = 2; }
+    return aceleracao * tempo;
+};
+console.log("Velocidade de A \u00E9 " + velocidadeA(10));
+console.log("Velocidade de A \u00E9 " + velocidadeA(10, 3));
+// ou
+var velocidadeB = function (aceleracao, tempo) {
+    var t = tempo || 3;
+    return aceleracao * t;
+};
+console.log("Velocidade de b \u00E9 " + velocidadeB(10));
+console.log("Velocidade de b \u00E9 " + velocidadeB(10, 4));
