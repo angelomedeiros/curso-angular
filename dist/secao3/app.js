@@ -10,7 +10,8 @@ let ship = new Spacecraft('hyperdrive');
 ship.jumpToHyperspce();
 class MillenniumFalcon extends Spacecraft {
     constructor() {
-        super('hyperdrive');
+        super('pica das galaxias');
+        this.cargoContainers = 2;
     }
     jumpToHyperspce() {
         if (Math.random() >= 0.5) {
@@ -23,3 +24,5 @@ class MillenniumFalcon extends Spacecraft {
 }
 let falcon = new MillenniumFalcon();
 falcon.jumpToHyperspce();
+let goodForTheJob = (shipJob) => shipJob.cargoContainers > 2;
+console.log(`Is falcon good for the job? ${goodForTheJob(falcon) ? 'Yes' : 'No'}`);

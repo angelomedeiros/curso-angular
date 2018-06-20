@@ -11,10 +11,13 @@ class Spacecraft {
 let ship = new Spacecraft('hyperdrive')
 ship.jumpToHyperspce()
 
-class MillenniumFalcon extends Spacecraft {
+class MillenniumFalcon extends Spacecraft implements IContainership {
+
+	public cargoContainers: number
 
 	constructor() {
-		super('hyperdrive')
+		super('pica das galaxias')
+		this.cargoContainers = 2
 	}
 
 	public jumpToHyperspce() {
@@ -28,6 +31,9 @@ class MillenniumFalcon extends Spacecraft {
 let falcon = new MillenniumFalcon()
 falcon.jumpToHyperspce()
 
-interface Containership {
+interface IContainership {
 	cargoContainers: number
 }
+
+let goodForTheJob = (shipJob: IContainership) => shipJob.cargoContainers > 2
+console.log(`Is falcon good for the job? ${goodForTheJob(falcon) ? 'Yes' : 'No'}`)
