@@ -1,5 +1,6 @@
+import * as _ 												from 'lodash'
 import { IContainership, Spacecraft } from './base-ships'
-import { MillenniumFalcon } from './starfighters'
+import { MillenniumFalcon } 					from './starfighters'
 
 const ship = new Spacecraft('hyperdrive')
 ship.jumpToHyperspce()
