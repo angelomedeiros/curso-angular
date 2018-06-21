@@ -1,6 +1,10 @@
-<div>
-  Student: {{student.name}}
-  <div *ngIf="student.isJedi">
-    Eu sou um jedi no template {{student.temple}}!
+<div *ngIf='student'>
+  Student: {{student?.name}}
+  <div *ngIf='student?.isJedi'>
+    Eu sou um jedi no template {{student?.temple}}!
   </div>
 </div>
+
+<b *ngIf='!student'>
+  Não existe conteúdo para ser exibido!
+</b>
