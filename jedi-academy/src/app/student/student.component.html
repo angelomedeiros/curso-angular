@@ -1,3 +1,6 @@
-<p>
-  student works!
-</p>
+<div>
+  Student: {{student.name}}
+  <div [hidden]="!student.isJedi">
+    Eu sou um jedi no template {{student.temple}}!
+  </div>
+</div>
