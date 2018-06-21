@@ -14,7 +14,8 @@
             "kebab-case"
         ],
         "semicolon": [true, "never"],
-        "indent": [true, "tabs", 2]
+        "indent": [true, "tabs", 2],
+        "import-spacing": false
     }
 }
 
